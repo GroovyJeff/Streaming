@@ -1,0 +1,15 @@
+import tkinter
+
+def setup(**kwargs):
+    root = tkinter.Tk()
+    
+    return root
+#    tl = tkinter.Toplevel()
+
+root = setup()
+
+root.geometry("1600x100+0+100")
+root.overrideredirect(True)
+
+root.mainloop()
+

@@ -1,0 +1,8 @@
+repeated "welcome to chat root" messages are annoying and distracting
+
+xplanet -window -geometry 1600x1350 -projection merc -num_times 1 -output temp.png
+convert -crop 1600x900+0+135 temp.png temp2.png
+
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/jeff/Git/Streaming/20240517/temp2.png'
+
+
