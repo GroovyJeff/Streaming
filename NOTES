@@ -1,0 +1,37 @@
+Concerns:
+
+  - Is xterm font too small?
+
+  - does video appear choppy?
+
+github link promiment, twitch.tv link (which will link to others)
+
+Problem: viewers can not see mouse
+
+ticker instead of bg image (fade in/out to avoid animation issues?)
+
+Organization by date (of git)
+
+cheating (have done this before)
+
+First first stream: setup
+
+First stream different, catch up; then on rubberduck
+
+naturalearthdata, qgis, sr_sov_s3
+
+gdal_rasterize do it wrong first (no -t option) then right
+
+overlay on OSM, but wrong equiangular, do mercator (with -t)
+
+write python code using ckdtree (explain why needed)
+
+show colorization
+
+increase res from 256x256 to much higher
+
+more... incl maybe GRASS GIS and voronoi intro
+
+"dconf dump /" will dump all dconf settings
+
+dconf read /org/gnome/shell/extensions/showmethetext/text
