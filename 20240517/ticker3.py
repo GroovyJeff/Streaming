@@ -2,17 +2,16 @@ import tkinter as tk
 import datetime
 import pytz
 
-tzone = pytz.timezone("EST5EDT");
-print(datetime.datetime.now().astimezone(tzone).strftime("%H%M,%a%d%b"))
+# tzone = pytz.timezone("EST5EDT");
+# print(datetime.datetime.now().astimezone(tzone).strftime("%H%M,%a%d%b"))
 
+# print(datetime.datetime.now())
 
-exit();
+# exit();
 
 # arr = list(range(20));
 
 arr = [];
-
-i=0;
 
 zones = {
           "ASamoa": "Pacific/Pago_Pago",
@@ -38,15 +37,20 @@ zones = {
 }
 
 for i in zones:
-    
-    current_time = datetime.datetime.now(datetime.timezone.utc).astimezone(zones[i])
-    tz = pytz.timezone(zones[i])
-    print(current_time.strftime("%H%M,%a%d%b"))
+
+    now = datetime.datetime.now(datetime.timezone.utc)
+    zone = pytz.timezone(zones[i])
+    arr.append(i+" "+now.astimezone(zone).strftime("%H%M,%a%d%b"))
+#    current_time = datetime.datetime.now(datetime.timezone.utc).astimezone(zones[i])
+#    tz = pytz.timezone(zones[i])
+#    print(current_time.strftime("%H%M,%a%d%b"))
 
 #    zstr = zones[i]+ " "+
 #    print(i, zones[i])
 
-exit()
+i=0;
+
+# print(arr)
 
 root = tk.Tk()
 root.geometry("1600x100+0+100")
@@ -57,7 +61,7 @@ root.label.pack()
 
 def update_label():
     global arr, i
-    root.label.config(text=str(arr[i]))
+    root.label.config(text=arr[i])
     i = i+1;
     root.after(1000, update_label)
 
