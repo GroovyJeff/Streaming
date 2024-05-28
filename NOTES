@@ -35,3 +35,5 @@ more... incl maybe GRASS GIS and voronoi intro
 "dconf dump /" will dump all dconf settings
 
 dconf read /org/gnome/shell/extensions/showmethetext/text
+
+for bg image, use OSM map and shrink as I did previously
