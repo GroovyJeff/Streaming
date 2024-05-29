@@ -1,0 +1,14 @@
+gnomonic projection
+
+most isolated point in pacific ocean
+
+combine above
+
+sunrise/sunset map
+
+finish up on greatest distance (densification!!)
+
+draw polygons from SHP files (mention grass and gdal_rasterize)
+
+use julia libs for gdal and grass (instead of weird hacking I'm doing now)
+
