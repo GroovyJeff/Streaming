@@ -6,6 +6,7 @@ using LinearAlgebra
 using Shapefile
 using GeoDataFrames
 using DataFrames
+using NearestNeighbors
 
 df = DataFrame(Shapefile.Table("/home/jeff/20240527/gadm41_USA_0.shp"))
 
@@ -24,6 +25,27 @@ x = [i[1] for i in ret]
 y = [i[2] for i in ret]
 z = [i[3] for i in ret]
 
+# scatter3d(x,y,z)
+
+tree = KDTree(hcat(ret...))
+
+for i in range(1,size(ret)[1])
+ tq = knn(tree, ret[i], size(ret)[1], true)
+ pt = tq[1][end]
+ dist = tq[2][end]
+ if i%1000 == 0 println("$i $pt $dist") end
+end
+
+for i in ret
+# println(i, knn(tree, i, size(ret)[1], true)[1:5])
+# pt = knn(tree, i, size(ret)[1], true)[1][end]
+# dist = knn(tree, i, size(ret)[1], true)[2][end]
+
+ pt = knn(tree, i, size(ret)[1])[1][1]
+ dist = knn(tree, i, size(ret)[1])[2][1]
+ println(pt," ", dist)
+end
+
 println(ret)
 
 mdist = 0
@@ -40,9 +62,5 @@ while true
   println(dist, v1, v2)
  end
 end
-
-
-
-  
 
 
