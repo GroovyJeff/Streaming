@@ -12,3 +12,6 @@ draw polygons from SHP files (mention grass and gdal_rasterize)
 
 use julia libs for gdal and grass (instead of weird hacking I'm doing now)
 
+convex hull in GRASS GIS-- what is it and why compute it?
+
+
