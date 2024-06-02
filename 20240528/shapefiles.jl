@@ -1,16 +1,17 @@
-using Pkg
-using Plots
-using Makie
-using Distances
-using LinearAlgebra
-using Shapefile
-using GeoDataFrames
-using DataFrames
-using NearestNeighbors
+@everywhere using Pkg
+@everywhere using Plots
+@everywhere using Makie
+@everywhere using Distances
+@everywhere using LinearAlgebra
+@everywhere using Shapefile
+@everywhere using GeoDataFrames
+@everywhere using DataFrames
+@everywhere using NearestNeighbors
+@everywhere using Distributed
 
 df = DataFrame(Shapefile.Table("/home/jeff/20240527/gadm41_USA_0.shp"))
 
-ret = []
+@everywhere global ret = []
 
 for i in df.geometry
  for j in i.points
@@ -27,13 +28,26 @@ z = [i[3] for i in ret]
 
 # scatter3d(x,y,z)
 
-tree = KDTree(hcat(ret...))
+@everywhere global temp1 = hcat(ret...)
+
+@everywhere global tree = KDTree(temp1)
+
+@everywhere function maxDist(i::Int)
+ @everywhere global tree
+ tq = knn(tree, ret[i], size(ret)[1], true)
+ pt = tq[1][end]
+ dist = tq[2][end]
+ println("$i $pt $dist")
+end
+
+pmap(maxDist, range(1,size(ret)[1]))
 
 for i in range(1,size(ret)[1])
  tq = knn(tree, ret[i], size(ret)[1], true)
  pt = tq[1][end]
  dist = tq[2][end]
- if i%1000 == 0 println("$i $pt $dist") end
+ println("$i $pt $dist")
+# if i%1000 == 0 println("$i $pt $dist") end
 end
 
 for i in ret
