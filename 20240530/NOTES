@@ -1,0 +1,19 @@
+julia sucks (not much faster or even at all faster), back to python
+(with others) with n_procs and grass
+
+longest distance via antipodes
+
+pacific ocean hole + more (gnomonic)
+
+can grass/python/julia use URLs (if so, maybe do that for large files)
+and/or Amazon s3 buckets or whatever
+
+can gdal_rasterize draw just outlines and draw gnomonic?
+
+apply kdtree to an entire array at once (faster?) in julia
+
+pmap!
+
+least populated timezone in USA
+
+
