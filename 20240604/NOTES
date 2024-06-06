@@ -1,0 +1,58 @@
+why isn't gnomonic distance preserving? do a derivative argument to find out?
+
+https://new.reddit.com/r/theydidthemath/comments/1d7970q/request_does_every_section_really_contain_10_of/ and splitting world into slices of equal population more "naturally"
+
+see also previous notes
+
+timezones and populations
+
+https://new.reddit.com/r/geography/comments/1d84ia5/whats_the_longest_you_can_travel_by_water_within/
+
+https://new.reddit.com/r/geography/comments/1d83o1r/the_most_geopolitically_isolated_place_and_city/ (deleted; was: city furthest from foreign country)
+
+CSPICE determine solar elevation for all pixels how fast? (then overlay w transparency?)
+
+jeff-Virtual-Machine:~> xplanet -window -geometry 1600x1350 -projection merc -num_times 1 -output /tmp/bg0.png && convert -crop 1600x900+0+135 /tmp/bg0.png /tmp/bg1.png && gsettings set org.gnome.desktop.background picture-uri 'file:///tmp/bg1.png'
+
+(added to cron, created)
+
+localtime 12 was the magic option
+
+use markerfile created by Python tz script for xplanet?
+
+(or overlay timezones?)
+
+shortcut to show bg image?
+
+https://staticmap.openstreetmap.de/staticmap.php?center=LAT,LON&zoom=ZOOM&size=WIDTHxHEIGHT
+
+maybe writeup common reddit replies on stream and refer people to them ideas:
+
+  - can't draw perfect geometric figures w pen and paper not 0 thickness
+
+  - mechanical objects cant exceed speed of light using leverage
+
+  - stuff that people should invent (lazy enterpenaur site?)
+
+  - science is an epistimology
+
+  - us not a democracy
+
+  - no global warming (but I won't fight it on stream)
+
+different type of problem: https://new.reddit.com/r/geography/comments/1d8slnb/townscities_with_the_same_name_which_ones_are/
+
+https://new.reddit.com/r/theydidthemath/comments/1d93b2c/request_are_the_majority_of_people_in_the_world/
+
+on stream notes:
+
+ogr2ogr -nlt LINESTRING temp.shp /home/jeff/20240527/gadm41_USA_0.shp
+
+ogr2ogr -clipsrc -130 24 -65 49.5 -nlt LINESTRING temp.shp /home/jeff/20240527/gadm41_USA_0.shp
+
+gdal_rasterize -ot Byte -at -burn 255 -ts 256 256 temp.shp temp.bmp
+
+gdal_rasterize -te -180 -90 180 90 -ot Byte -at -burn 255 -ts 256 256 temp.shp temp.bmp
+
+
+

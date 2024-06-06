@@ -1,0 +1,103 @@
+# gdal_rasterize tiny world (-at is important, all touched)
+
+gdal_rasterize -at -burn 255 -ts 256 256 -ot Byte ne_10m_admin_0_scale_rank_minor_islands.shp -of bmp -te -180 -90 180 90 img256.bmp
+
+gdal_rasterize -at -burn 255 -ts 32768 32768 -ot Byte ne_10m_admin_0_scale_rank_minor_islands.shp -of bmp -te -180 -90 180 90 img32768.bmp
+
+gdal_rasterize -at -burn 255 -ts 256 256 -ot Byte ne_10m_admin_0_scale_rank_minor_islands.shp -sql "SELECT ST_Boundary(geometry) AS geometry FROM polygons" -of bmp -te -180 -90 180 90 img256.bmp
+
+# below fails
+
+# ogr2ogr -f "ESRI Shapefile" -dialect sqlite -sql "SELECT ST_Boundary(geometry) AS geometry FROM POLYGON" lines.shp ne_10m_admin_0_scale_rank_minor_islands.shp
+
+ogr2ogr -f "ESRI Shapefile" -nlt LINESTRING lines.shp ne_10m_admin_0_scale_rank_minor_islands.shp
+
+ogr2ogr -f "ESRI Shapefile" -nlt LINESTRING25D lines2.shp ne_10m_admin_0_scale_rank_minor_islands.shp
+
+# below is hideous
+# gdalwarp -of BMP -t_srs "+proj=gnom +lat_0=90 +lon_0=0 +datum=WGS84" -te -2000000 -2000000 2000000 2000000 -tr 1000 1000 -tap -r near img32768.bmp newimg32768.bmp
+
+setenv LATITUDE 90
+setenv LONGITUDE 0
+
+# ogr2ogr -t_srs "+proj=gnom +lat_0=$LATITUDE +lon_0=$LONGITUDE +datum=WGS84" gnom1.shp ne_10m_admin_0_scale_rank_minor_islands.shp
+
+ogr2ogr -skipfailures -t_srs "+proj=gnom +lat_0=$LATITUDE +lon_0=$LONGITUDE +datum=WGS84" gnom1.shp ne_10m_admin_0_scale_rank_minor_islands.shp
+
+# gdalwarp -of BMP -t_srs "+proj=gnom +lat_0=$LATITUDE +lon_0=$LONGITUDE +datum=WGS84" -te -2000000 -2000000 2000000 2000000 -tr 1000 1000 -tap -r near line.bmp gnom2.bmp -overwrite
+
+gdalwarp -of BMP -t_srs "+proj=gnom +lat_0=$LATITUDE +lon_0=$LONGITUDE +datum=WGS84" -te -8000000 -8000000 8000000 8000000 -tr 1000 1000 -tap -r near line.bmp gnom2.bmp -overwrite
+
+gdalwarp -of BMP -t_srs "+proj=gnom +lat_0=$LATITUDE +lon_0=$LONGITUDE +datum=WGS84" -te -8000000 -8000000 8000000 8000000 -ts 1600 900 -r near line.bmp gnom2.bmp -overwrite
+
+gdalwarp -of BMP -t_srs "+proj=gnom +lat_0=$LATITUDE +lon_0=$LONGITUDE +datum=WGS84" -te -16000000 -16000000 16000000 16000000 -ts 1600 900 -r near line.bmp gnom2.bmp -overwrite
+
+gdalwarp -of BMP -t_srs "+proj=gnom +lat_0=90 +lon_0=0 +datum=WGS84" -te -16000000 -16000000 16000000 16000000 -ts 1600 900 -r near line.bmp gnom2.bmp -overwrite
+
+proof of distance preservation (mathics):
+
+(* 3d projection of two points *)
+
+pt1 = {Cos[theta1]*Cos[phi1], Sin[theta1]*Cos[phi1], Sin[phi1]}
+
+pt2 = {Cos[theta2]*Cos[phi2], Sin[theta2]*Cos[phi2], Sin[phi2]}
+
+Simplify[ArcCos[pt1.pt2]]
+
+# yields ArcCos[Cos[phi1] Cos[phi2] Cos[theta1 - theta2] + Sin[phi1] Sin[phi2]]
+
+# now, gnomonic projection centered at n pole
+
+gn1 = (Pi/2-phi1)*{Cos[theta1], Sin[theta1]}
+gn2 = (Pi/2-phi2)*{Cos[theta2], Sin[theta2]}
+
+Simplify[Norm[gn1-gn2]]
+
+# yields Sqrt[Abs[Cos[theta1] (-Pi + 2 phi1) + Cos[theta2] (Pi - 2 phi2)] ^ 2 + Abs[(Pi - 2 phi2) Sin[theta2] + (-Pi + 2 phi1) Sin[theta1]] ^ 2] / 2
+
+# are these the same?
+
+f[theta1_, phi1_, theta2_, phi2_] = N[{
+ ArcCos[Cos[phi1] Cos[phi2] Cos[theta1 - theta2] + Sin[phi1] Sin[phi2]],
+ Sqrt[Abs[Cos[theta1] (-Pi + 2 phi1) + Cos[theta2] (Pi - 2 phi2)] ^ 2 + Abs[(Pi - 2 phi2) Sin[theta2] + (-Pi + 2 phi1) Sin[theta1]] ^ 2] / 2
+}]
+
+(* both points must be in northern hemisphere, known limitation *)
+
+{theta1, phi1, theta2, phi2} = {
+ RandomReal[]*2*Pi, RandomReal[]*Pi, RandomReal[]*2*Pi, RandomReal[]*Pi}
+
+f[theta1,phi1,theta2,phi2]
+
+(* simplest failure *)
+
+f[0,50*Degree,10*Degree,40*Degree]
+
+f[90*Degree,50*Degree,10*Degree,40*Degree]
+
+f[0*Degree,50*Degree,10*Degree,50*Degree]
+
+sph2xyz[theta_, phi_, r_] = r*{Cos[theta]*Cos[phi],
+Sin[theta]*Cos[phi], Sin[phi]}
+
+sph2xyz[0, 50.*Degree, 1]
+sph2xyz[10*Degree, 50.*Degree, 1]
+
+sph2xyz[0, 50.*Degree, 1].sph2xyz[10*Degree, 50.*Degree, 1]
+
+so maybe I'm do gnomonic wrong??
+
+gn1 = Cos[phi1]*{Cos[theta1], Sin[theta1]}
+gn2 = Cos[phi2]*{Cos[theta2], Sin[theta2]}
+
+Simplify[Norm[gn1-gn2]]
+
+# yields Sqrt[Abs[-Cos[phi2] Cos[theta2] + Cos[phi1] Cos[theta1]] ^ 2 + Abs[-Cos[phi2] Sin[theta2] + Cos[phi1] Sin[theta1]] ^ 2]
+
+f[theta1_, phi1_, theta2_, phi2_] = N[{
+ ArcCos[Cos[phi1] Cos[phi2] Cos[theta1 - theta2] + Sin[phi1] Sin[phi2]],
+ Sqrt[Abs[-Cos[phi2] Cos[theta2] + Cos[phi1] Cos[theta1]] ^ 2 + Abs[-Cos[phi2] Sin[theta2] + Cos[phi1] Sin[theta1]] ^ 2]
+}]
+
+(* that can't be right either, lines must be equally spaced *)
+
