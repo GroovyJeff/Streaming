@@ -1,3 +1,5 @@
+# THIS VERSION DOES NOT WORK ON JEFF VIRTUAL MACHINE
+
 using Images
 using NearestNeighbors
 using LinearAlgebra
