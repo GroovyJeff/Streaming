@@ -1,0 +1,45 @@
+First use naturalearthdata.com to create high-ish resolution maps of the United States and the rest of the world:
+
+gdal_rasterize -ot Byte -at -burn 255 -ts 43200 21600 -where 'sr_sov_a3 NOT IN ("US1")' ne_10m_admin_0_scale_rank_minor_islands.shp notusa.tif
+
+gdal_rasterize -ot Byte -at -burn 255 -ts 43200 21600 -where 'sr_sov_a3 IN ("US1")' ne_10m_admin_0_scale_rank_minor_islands.shp yesusa.tif
+
+Now, enter the GRASS shell, and do the following (with comments):
+
+# import the maps we created with gdal_rasterize
+
+r.in.gdal input=notusa.tif output=notusa --overwrite
+r.in.gdal input=yesusa.tif output=yesusa --overwrite
+
+# make sure the resolution matches the maps (43200x21600)
+
+g.region raster=notusa
+
+# we're going to use r.grow.distance, which needs empty pixels to be null, not 0, so we tweak as follows
+
+r.mapcalc "notusa = if(notusa != 0, 1, null())" --overwrite
+
+# we now compute the minimum distance from any non-USA country to any point in the world (value=notusaval is not used, but easy to compute so I threw it in)
+
+r.grow.distance input=notusa distance=notusadist value=notusaval metric=geodesic --overwrite
+
+# now we intersect the distance-from-not-US and US maps to find the point in the United States furthest from any other country
+
+r.mapcalc "inusa = if(notusadist > 0 && yesusa > 0, notusadist, 0)" --overwrite
+
+# this command tells us the max distance to the USA location furthest from any other country
+
+r.info inusa
+
+# the answer is max = 3231293.59645944
+
+# doing floating point math exactly is bad, so lets just select those points further than the floor of that number
+
+r.mapcalc "max_value_mask = if(inusa > 3231293, inusa, null())" --overwrite
+
+# now, find the non-0 points, which should be the max or close to it
+
+r.stats -1gn input=max_value_mask
+
+# the result is: -178.2875 28.4047909985732 3231293.59645944
+
