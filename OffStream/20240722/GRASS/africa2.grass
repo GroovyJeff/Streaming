@@ -1,0 +1,69 @@
+# Computing how much of the world's population is closer to South Africa than to the North Pole isn't particularly interesting, but the generalizable steps used to do so might be
+
+# to do this file yourself, you'll need grass74 and your "g.proj -p" should look something like this:
+
+# GRASS GIS 7.4.1 > g.proj -p
+# -PROJ_INFO-------------------------------------------------
+# name       : WGS 84
+# datum      : wgs84
+# ellps      : wgs84
+# proj       : ll
+# no_defs    : defined
+# -PROJ_UNITS------------------------------------------------
+# unit       : degree
+# units      : degrees
+# meters     : 1.0
+
+# you will also need the ne_10m_admin_0_scale_rank_minor_islands.shp file from https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_scale_rank_minor_islands.zip and population data gpw_v4_population_count_rev11_2020_30_sec.tif from https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-count-rev11/data-download (login required)
+
+# Using a command like `ogrinfo -al -geom=NO ne_10m_admin_0_scale_rank_minor_islands.shp | grep -C 5 "South Africa"` we see that the sr_sov_a3 for South Africa is ZAF; we could also use other fields here, but, in general, sr_sov_a3 is the best field if you're looking at soverignties
+
+# First, we are going to create a high resolution (30 seconds of arc or 43200x21600 for the world) map of South Africa using the non-GRASS (python) tool gdal_rasterize; GRASS has built in tools to create rasters from shapefiles, but gdal_rasterize's -at "all touched" option is important so we don't lose islands
+
+# NOTE: GRASS GIS' v.to.rast -d option appears to claim to do the same thing as gdal_rasterize's -at option, but I don't think it actually does
+
+# In general, we don't need 43200x21600 resolution, but, in this case, our population data has that resolution, so we do need it
+
+# To generalize this, we'll use shell environment variables instead of hardcoded data; note that `g.gisenv` won't quite work because gdal_rasterize runs outside of GRASS; my shell is tcsh, you may need to adjust for your shell
+
+setenv GRASS_FILE_BASE ZAF
+setenv GRASS_HEIGHT 21600
+setenv GRASS_WIDTH 43200
+
+# now to rasterize
+
+# we burn using category if we want to do Voronoi between two or more countries; the countries are NOT indexed by category, but we can later use v.dissolve on the sr_sov_a3 field to fix this; this it not relevant here, however since we only have one country
+
+gdal_rasterize -a cat -at -ts $GRASS_WIDTH $GRASS_HEIGHT -ot Byte $GRASS_FILE_BASE.gpkg -of GTiff -co "COMPRESS=LZW" -te -180 -90 180 90 $GRASS_FILE_BASE.tif
+
+# import this into GRASS GIS
+
+r.in.gdal input=$GRASS_FILE_BASE.tif output=${GRASS_FILE_BASE}Raster --overwrite
+
+# HACK: r.grow.distance requires empty points to be NULL, not zero
+
+# overwriting the raster file isn't great here, but this operation should be idempotent (we can do it multiple times and its the same as doing it one time), so it should be OK
+
+r.mapcalc "${GRASS_FILE_BASE}Raster = if(${GRASS_FILE_BASE}Raster == 0, null(), ${GRASS_FILE_BASE}Raster)" --overwrite
+
+# compute distance to all points
+
+r.grow.distance -m --overwrite input=${GRASS_FILE_BASE}Raster distance=${GRASS_FILE_BASE}RasterDistance metric=geodesic
+
+# TODO: the above command takes a while; there might be, in general, a faster way to determine the Voronoi diagram boundaries without computing the distance to every single point
+
+# the earth's average radius is 6371km, so the average circumference is 40030000m to the nearest km; we can thus compute the distance from the north pole simply using the y() coordinate:
+
+r.mapcalc "${GRASS_FILE_BASE}CloserTo = if(${GRASS_FILE_BASE}RasterDistance < (90-y())/360*40030000,population,null())" --overwrite
+
+r.mapcalc "${GRASS_FILE_BASE}FurtherFrom = if(${GRASS_FILE_BASE}RasterDistance < (90-y())/360*40030000,null(),population)" --overwrite
+
+r.univar ${GRASS_FILE_BASE}CloserTo
+
+# sum: 2876477888.14369
+
+r.univar ${GRASS_FILE_BASE}FurtherFrom
+
+# sum: 5092966463.48477
+
+# note that 2876477888.14369/(2876477888.14369+5092966463.48477) ~ 36.09%

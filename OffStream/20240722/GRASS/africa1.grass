@@ -1,0 +1,87 @@
+# Computing how much of the world's population is closer to South Africa than to the North Pole isn't particularly interesting, but the generalizable steps used to do so might be
+
+# to do this file yourself, you'll need grass74 and your "g.proj -p" should look something like this:
+
+# GRASS GIS 7.4.1 > g.proj -p
+# -PROJ_INFO-------------------------------------------------
+# name       : WGS 84
+# datum      : wgs84
+# ellps      : wgs84
+# proj       : ll
+# no_defs    : defined
+# -PROJ_UNITS------------------------------------------------
+# unit       : degree
+# units      : degrees
+# meters     : 1.0
+
+# you will also need the ne_10m_admin_0_scale_rank_minor_islands.shp file from https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_scale_rank_minor_islands.zip and population data gpw_v4_population_count_rev11_2020_30_sec.tif from https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-count-rev11/data-download (login required)
+
+# Using a command like `ogrinfo -al -geom=NO ne_10m_admin_0_scale_rank_minor_islands.shp | grep -C 5 "South Africa"` we see that the sr_sov_a3 for South Africa is ZAF; we could also use other fields here, but, in general, sr_sov_a3 is the best field if you're looking at soverignties
+
+# First, we are going to create a high resolution (30 seconds of arc or 43200x21600 for the world) map of South Africa using the non-GRASS (python) tool gdal_rasterize; GRASS has built in tools to create rasters from shapefiles, but gdal_rasterize's -at "all touched" option is important so we don't lose islands
+
+# NOTE: GRASS GIS' v.to.rast -d option appears to claim to do the same thing as gdal_rasterize's -at option, but I don't think it actually does
+
+# In general, we don't need 43200x21600 resolution, but, in this case, our population data has that resolution, so we do need it
+
+# To generalize this, we'll use shell environment variables instead of hardcoded data; note that `g.gisenv` won't quite work because gdal_rasterize runs outside of GRASS; my shell is tcsh, you may need to adjust for your shell
+
+setenv GRASS_FILE_BASE ZAF
+setenv GRASS_HEIGHT 21600
+setenv GRASS_WIDTH 43200
+
+# now to rasterize
+
+# we burn using category if we want to do Voronoi between two or more countries; the countries are NOT indexed by category, but we can later use v.dissolve on the sr_sov_a3 field to fix this; this it not relevant here, however since we only have one country
+
+gdal_rasterize -a cat -at -ts $GRASS_WIDTH $GRASS_HEIGHT -ot Byte $GRASS_FILE_BASE.gpkg -of GTiff -co "COMPRESS=LZW" -te -180 -90 180 90 $GRASS_FILE_BASE.tif
+
+# import this into GRASS GIS
+
+r.in.gdal input=$GRASS_FILE_BASE.tif output=${GRASS_FILE_BASE}Raster --overwrite
+
+# HACK: r.grow.distance requires empty points to be NULL, not zero
+
+# at this point, we are deviating signifigantly from how we'd do a regular Voronoi diagram
+
+# we now add the north pole (top left column although technically the entire top left row) and convert 0 to null for hack above
+
+# for pedants, the top left pixel at finite resolution isn't quite the north pole but within 0.5km or so of it
+
+# `r.info ${GRASS_FILE_BASE}Raster` would tell us the raster value for South Africa is 205; this isn't important except that we can't use 205 for the North Pole (which we probably wouldn't anyway)
+
+# `man r.mapcalc` reminds us "Note, that the row() and col() indexing starts with 1."
+
+# overwriting the raster file isn't great here, but I'm OK with it
+
+r.mapcalc "${GRASS_FILE_BASE}Raster = if(row() == 1 && col() == 1, 1, if(${GRASS_FILE_BASE}Raster == 0, null(), ${GRASS_FILE_BASE}Raster))" --overwrite
+
+# we only need to know whether a point is closer to South Africa or the North Pole, not the actual distance
+
+r.grow.distance -m --overwrite input=${GRASS_FILE_BASE}Raster value=${GRASS_FILE_BASE}RasterValue metric=geodesic
+
+# TODO: the above command takes a while; not computing distances should've made it faster but doesn't appear to; there might be, in general, a faster way to determine the Voronoi diagram boundaries without computing the distance to every single point
+
+# import the population count map
+
+r.in.gdal input=gpw_v4_population_count_rev11_2020_30_sec.tif output=population --overwrite
+
+# TODO: I think there's a better way to do below
+
+# create a population map of those points closer to ZAF (we know that ZAF has value 205, but, to keep things as general as possible, we just required > 1; the value of 1 indicates further from ZAF closer to north pole
+
+r.mapcalc "${GRASS_FILE_BASE}Closer = if(${GRASS_FILE_BASE}RasterValue > 1, population, null())"
+
+r.univar ${GRASS_FILE_BASE}Closer
+
+# sum: 2880762418.87694
+
+# in theory, we don't need to compute Farther because it'll just be world population minus above, but just to check ourselves
+
+r.mapcalc "${GRASS_FILE_BASE}Farther = if(${GRASS_FILE_BASE}RasterValue == 1, population, null())"
+
+r.univar ${GRASS_FILE_BASE}Farther
+
+# sum: 5088681932.75181
+
+# note that 2880762418.87694/(2880762418.87694+5088681932.75181) ~ 36.15%
