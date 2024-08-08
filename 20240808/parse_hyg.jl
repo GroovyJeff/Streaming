@@ -9,28 +9,26 @@ lines = split(data, "\n")
 
 lines2 = lines[3:end-1]
 
-# fields = split(lines[1], ",")
-
-# data = [Dict(fields[i] => split(line, ",")[i] for i in 1:length(fields)) for line in lines[2:end]]
-
 stars = [split(line, ",") for line in lines2]
 
-width = 7200
-height = 3600
+width = 720
+height = 360
 
 # TODO: fix this better
-arr = zeros(Float64, width+1, height+1)
+arr = zeros(Float64, height+1, width+1)
 
 for i in stars
 
  (ra, dec, mag) = (parse(Float64, i[8]), parse(Float64, i[9]), parse(Float64, i[14]))
 
- xpixel = Int(round(ra/24*width)+1)
+ if (mag > 3.5) continue end
+
+ xpixel = Int(width-round(ra/24*width)+1)
  ypixel = Int(round((90-dec)/180*height)+1)
 
 # print(xpixel,",",ypixel,"\n")
 
- arr[xpixel,ypixel] = 1.0
+ arr[ypixel,xpixel] = 1.0
 
 end
 
@@ -38,7 +36,7 @@ img = Gray.(arr)
 
 Images.save("monochrome_image.png", img)
 
-
+exit()
 
 
 
