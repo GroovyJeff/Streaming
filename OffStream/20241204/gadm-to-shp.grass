@@ -1,0 +1,508 @@
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ABW_shp.zip/gadm41_ABW_0.shp output=gadm41_ABW
+v.db.dropcolumn gadm41_ABW columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_AFG_shp.zip/gadm41_AFG_0.shp output=gadm41_AFG
+v.db.dropcolumn gadm41_AFG columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_AGO_shp.zip/gadm41_AGO_0.shp output=gadm41_AGO
+v.db.dropcolumn gadm41_AGO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_AIA_shp.zip/gadm41_AIA_0.shp output=gadm41_AIA
+v.db.dropcolumn gadm41_AIA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ALA_shp.zip/gadm41_ALA_0.shp output=gadm41_ALA
+v.db.dropcolumn gadm41_ALA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ALB_shp.zip/gadm41_ALB_0.shp output=gadm41_ALB
+v.db.dropcolumn gadm41_ALB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_AND_shp.zip/gadm41_AND_0.shp output=gadm41_AND
+v.db.dropcolumn gadm41_AND columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ARE_shp.zip/gadm41_ARE_0.shp output=gadm41_ARE
+v.db.dropcolumn gadm41_ARE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ARG_shp.zip/gadm41_ARG_0.shp output=gadm41_ARG
+v.db.dropcolumn gadm41_ARG columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ARM_shp.zip/gadm41_ARM_0.shp output=gadm41_ARM
+v.db.dropcolumn gadm41_ARM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ASM_shp.zip/gadm41_ASM_0.shp output=gadm41_ASM
+v.db.dropcolumn gadm41_ASM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ATA_shp.zip/gadm41_ATA_0.shp output=gadm41_ATA
+v.db.dropcolumn gadm41_ATA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ATF_shp.zip/gadm41_ATF_0.shp output=gadm41_ATF
+v.db.dropcolumn gadm41_ATF columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ATG_shp.zip/gadm41_ATG_0.shp output=gadm41_ATG
+v.db.dropcolumn gadm41_ATG columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_AUS_shp.zip/gadm41_AUS_0.shp output=gadm41_AUS
+v.db.dropcolumn gadm41_AUS columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_AUT_shp.zip/gadm41_AUT_0.shp output=gadm41_AUT
+v.db.dropcolumn gadm41_AUT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_AZE_shp.zip/gadm41_AZE_0.shp output=gadm41_AZE
+v.db.dropcolumn gadm41_AZE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BDI_shp.zip/gadm41_BDI_0.shp output=gadm41_BDI
+v.db.dropcolumn gadm41_BDI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BEL_shp.zip/gadm41_BEL_0.shp output=gadm41_BEL
+v.db.dropcolumn gadm41_BEL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BEN_shp.zip/gadm41_BEN_0.shp output=gadm41_BEN
+v.db.dropcolumn gadm41_BEN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BES_shp.zip/gadm41_BES_0.shp output=gadm41_BES
+v.db.dropcolumn gadm41_BES columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BFA_shp.zip/gadm41_BFA_0.shp output=gadm41_BFA
+v.db.dropcolumn gadm41_BFA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BGD_shp.zip/gadm41_BGD_0.shp output=gadm41_BGD
+v.db.dropcolumn gadm41_BGD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BGR_shp.zip/gadm41_BGR_0.shp output=gadm41_BGR
+v.db.dropcolumn gadm41_BGR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BHR_shp.zip/gadm41_BHR_0.shp output=gadm41_BHR
+v.db.dropcolumn gadm41_BHR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BHS_shp.zip/gadm41_BHS_0.shp output=gadm41_BHS
+v.db.dropcolumn gadm41_BHS columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BIH_shp.zip/gadm41_BIH_0.shp output=gadm41_BIH
+v.db.dropcolumn gadm41_BIH columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BLM_shp.zip/gadm41_BLM_0.shp output=gadm41_BLM
+v.db.dropcolumn gadm41_BLM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BLR_shp.zip/gadm41_BLR_0.shp output=gadm41_BLR
+v.db.dropcolumn gadm41_BLR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BLZ_shp.zip/gadm41_BLZ_0.shp output=gadm41_BLZ
+v.db.dropcolumn gadm41_BLZ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BMU_shp.zip/gadm41_BMU_0.shp output=gadm41_BMU
+v.db.dropcolumn gadm41_BMU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BOL_shp.zip/gadm41_BOL_0.shp output=gadm41_BOL
+v.db.dropcolumn gadm41_BOL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BRA_shp.zip/gadm41_BRA_0.shp output=gadm41_BRA
+v.db.dropcolumn gadm41_BRA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BRB_shp.zip/gadm41_BRB_0.shp output=gadm41_BRB
+v.db.dropcolumn gadm41_BRB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BRN_shp.zip/gadm41_BRN_0.shp output=gadm41_BRN
+v.db.dropcolumn gadm41_BRN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BTN_shp.zip/gadm41_BTN_0.shp output=gadm41_BTN
+v.db.dropcolumn gadm41_BTN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BVT_shp.zip/gadm41_BVT_0.shp output=gadm41_BVT
+v.db.dropcolumn gadm41_BVT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_BWA_shp.zip/gadm41_BWA_0.shp output=gadm41_BWA
+v.db.dropcolumn gadm41_BWA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CAF_shp.zip/gadm41_CAF_0.shp output=gadm41_CAF
+v.db.dropcolumn gadm41_CAF columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CAN_shp.zip/gadm41_CAN_0.shp output=gadm41_CAN
+v.db.dropcolumn gadm41_CAN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CCK_shp.zip/gadm41_CCK_0.shp output=gadm41_CCK
+v.db.dropcolumn gadm41_CCK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CHE_shp.zip/gadm41_CHE_0.shp output=gadm41_CHE
+v.db.dropcolumn gadm41_CHE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CHL_shp.zip/gadm41_CHL_0.shp output=gadm41_CHL
+v.db.dropcolumn gadm41_CHL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CHN_shp.zip/gadm41_CHN_0.shp output=gadm41_CHN
+v.db.dropcolumn gadm41_CHN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CIV_shp.zip/gadm41_CIV_0.shp output=gadm41_CIV
+v.db.dropcolumn gadm41_CIV columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CMR_shp.zip/gadm41_CMR_0.shp output=gadm41_CMR
+v.db.dropcolumn gadm41_CMR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_COD_shp.zip/gadm41_COD_0.shp output=gadm41_COD
+v.db.dropcolumn gadm41_COD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_COG_shp.zip/gadm41_COG_0.shp output=gadm41_COG
+v.db.dropcolumn gadm41_COG columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_COK_shp.zip/gadm41_COK_0.shp output=gadm41_COK
+v.db.dropcolumn gadm41_COK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_COL_shp.zip/gadm41_COL_0.shp output=gadm41_COL
+v.db.dropcolumn gadm41_COL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_COM_shp.zip/gadm41_COM_0.shp output=gadm41_COM
+v.db.dropcolumn gadm41_COM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CPV_shp.zip/gadm41_CPV_0.shp output=gadm41_CPV
+v.db.dropcolumn gadm41_CPV columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CRI_shp.zip/gadm41_CRI_0.shp output=gadm41_CRI
+v.db.dropcolumn gadm41_CRI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CUB_shp.zip/gadm41_CUB_0.shp output=gadm41_CUB
+v.db.dropcolumn gadm41_CUB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CUW_shp.zip/gadm41_CUW_0.shp output=gadm41_CUW
+v.db.dropcolumn gadm41_CUW columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CXR_shp.zip/gadm41_CXR_0.shp output=gadm41_CXR
+v.db.dropcolumn gadm41_CXR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CYM_shp.zip/gadm41_CYM_0.shp output=gadm41_CYM
+v.db.dropcolumn gadm41_CYM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CYP_shp.zip/gadm41_CYP_0.shp output=gadm41_CYP
+v.db.dropcolumn gadm41_CYP columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_CZE_shp.zip/gadm41_CZE_0.shp output=gadm41_CZE
+v.db.dropcolumn gadm41_CZE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_DEU_shp.zip/gadm41_DEU_0.shp output=gadm41_DEU
+v.db.dropcolumn gadm41_DEU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_DJI_shp.zip/gadm41_DJI_0.shp output=gadm41_DJI
+v.db.dropcolumn gadm41_DJI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_DMA_shp.zip/gadm41_DMA_0.shp output=gadm41_DMA
+v.db.dropcolumn gadm41_DMA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_DNK_shp.zip/gadm41_DNK_0.shp output=gadm41_DNK
+v.db.dropcolumn gadm41_DNK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_DOM_shp.zip/gadm41_DOM_0.shp output=gadm41_DOM
+v.db.dropcolumn gadm41_DOM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_DZA_shp.zip/gadm41_DZA_0.shp output=gadm41_DZA
+v.db.dropcolumn gadm41_DZA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ECU_shp.zip/gadm41_ECU_0.shp output=gadm41_ECU
+v.db.dropcolumn gadm41_ECU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_EGY_shp.zip/gadm41_EGY_0.shp output=gadm41_EGY
+v.db.dropcolumn gadm41_EGY columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ERI_shp.zip/gadm41_ERI_0.shp output=gadm41_ERI
+v.db.dropcolumn gadm41_ERI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ESH_shp.zip/gadm41_ESH_0.shp output=gadm41_ESH
+v.db.dropcolumn gadm41_ESH columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ESP_shp.zip/gadm41_ESP_0.shp output=gadm41_ESP
+v.db.dropcolumn gadm41_ESP columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_EST_shp.zip/gadm41_EST_0.shp output=gadm41_EST
+v.db.dropcolumn gadm41_EST columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ETH_shp.zip/gadm41_ETH_0.shp output=gadm41_ETH
+v.db.dropcolumn gadm41_ETH columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_FIN_shp.zip/gadm41_FIN_0.shp output=gadm41_FIN
+v.db.dropcolumn gadm41_FIN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_FJI_shp.zip/gadm41_FJI_0.shp output=gadm41_FJI
+v.db.dropcolumn gadm41_FJI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_FLK_shp.zip/gadm41_FLK_0.shp output=gadm41_FLK
+v.db.dropcolumn gadm41_FLK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_FRA_shp.zip/gadm41_FRA_0.shp output=gadm41_FRA
+v.db.dropcolumn gadm41_FRA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_FRO_shp.zip/gadm41_FRO_0.shp output=gadm41_FRO
+v.db.dropcolumn gadm41_FRO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_FSM_shp.zip/gadm41_FSM_0.shp output=gadm41_FSM
+v.db.dropcolumn gadm41_FSM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GAB_shp.zip/gadm41_GAB_0.shp output=gadm41_GAB
+v.db.dropcolumn gadm41_GAB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GBR_shp.zip/gadm41_GBR_0.shp output=gadm41_GBR
+v.db.dropcolumn gadm41_GBR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GEO_shp.zip/gadm41_GEO_0.shp output=gadm41_GEO
+v.db.dropcolumn gadm41_GEO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GGY_shp.zip/gadm41_GGY_0.shp output=gadm41_GGY
+v.db.dropcolumn gadm41_GGY columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GHA_shp.zip/gadm41_GHA_0.shp output=gadm41_GHA
+v.db.dropcolumn gadm41_GHA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GIB_shp.zip/gadm41_GIB_0.shp output=gadm41_GIB
+v.db.dropcolumn gadm41_GIB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GIN_shp.zip/gadm41_GIN_0.shp output=gadm41_GIN
+v.db.dropcolumn gadm41_GIN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GLP_shp.zip/gadm41_GLP_0.shp output=gadm41_GLP
+v.db.dropcolumn gadm41_GLP columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GMB_shp.zip/gadm41_GMB_0.shp output=gadm41_GMB
+v.db.dropcolumn gadm41_GMB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GNB_shp.zip/gadm41_GNB_0.shp output=gadm41_GNB
+v.db.dropcolumn gadm41_GNB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GNQ_shp.zip/gadm41_GNQ_0.shp output=gadm41_GNQ
+v.db.dropcolumn gadm41_GNQ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GRC_shp.zip/gadm41_GRC_0.shp output=gadm41_GRC
+v.db.dropcolumn gadm41_GRC columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GRD_shp.zip/gadm41_GRD_0.shp output=gadm41_GRD
+v.db.dropcolumn gadm41_GRD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GRL_shp.zip/gadm41_GRL_0.shp output=gadm41_GRL
+v.db.dropcolumn gadm41_GRL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GTM_shp.zip/gadm41_GTM_0.shp output=gadm41_GTM
+v.db.dropcolumn gadm41_GTM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GUF_shp.zip/gadm41_GUF_0.shp output=gadm41_GUF
+v.db.dropcolumn gadm41_GUF columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GUM_shp.zip/gadm41_GUM_0.shp output=gadm41_GUM
+v.db.dropcolumn gadm41_GUM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_GUY_shp.zip/gadm41_GUY_0.shp output=gadm41_GUY
+v.db.dropcolumn gadm41_GUY columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_HMD_shp.zip/gadm41_HMD_0.shp output=gadm41_HMD
+v.db.dropcolumn gadm41_HMD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_HND_shp.zip/gadm41_HND_0.shp output=gadm41_HND
+v.db.dropcolumn gadm41_HND columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_HRV_shp.zip/gadm41_HRV_0.shp output=gadm41_HRV
+v.db.dropcolumn gadm41_HRV columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_HTI_shp.zip/gadm41_HTI_0.shp output=gadm41_HTI
+v.db.dropcolumn gadm41_HTI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_HUN_shp.zip/gadm41_HUN_0.shp output=gadm41_HUN
+v.db.dropcolumn gadm41_HUN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_IDN_shp.zip/gadm41_IDN_0.shp output=gadm41_IDN
+v.db.dropcolumn gadm41_IDN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_IMN_shp.zip/gadm41_IMN_0.shp output=gadm41_IMN
+v.db.dropcolumn gadm41_IMN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_IND_shp.zip/gadm41_IND_0.shp output=gadm41_IND
+v.db.dropcolumn gadm41_IND columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_IOT_shp.zip/gadm41_IOT_0.shp output=gadm41_IOT
+v.db.dropcolumn gadm41_IOT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_IRL_shp.zip/gadm41_IRL_0.shp output=gadm41_IRL
+v.db.dropcolumn gadm41_IRL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_IRN_shp.zip/gadm41_IRN_0.shp output=gadm41_IRN
+v.db.dropcolumn gadm41_IRN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_IRQ_shp.zip/gadm41_IRQ_0.shp output=gadm41_IRQ
+v.db.dropcolumn gadm41_IRQ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ISL_shp.zip/gadm41_ISL_0.shp output=gadm41_ISL
+v.db.dropcolumn gadm41_ISL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ISR_shp.zip/gadm41_ISR_0.shp output=gadm41_ISR
+v.db.dropcolumn gadm41_ISR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ITA_shp.zip/gadm41_ITA_0.shp output=gadm41_ITA
+v.db.dropcolumn gadm41_ITA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_JAM_shp.zip/gadm41_JAM_0.shp output=gadm41_JAM
+v.db.dropcolumn gadm41_JAM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_JEY_shp.zip/gadm41_JEY_0.shp output=gadm41_JEY
+v.db.dropcolumn gadm41_JEY columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_JOR_shp.zip/gadm41_JOR_0.shp output=gadm41_JOR
+v.db.dropcolumn gadm41_JOR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_JPN_shp.zip/gadm41_JPN_0.shp output=gadm41_JPN
+v.db.dropcolumn gadm41_JPN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KAZ_shp.zip/gadm41_KAZ_0.shp output=gadm41_KAZ
+v.db.dropcolumn gadm41_KAZ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KEN_shp.zip/gadm41_KEN_0.shp output=gadm41_KEN
+v.db.dropcolumn gadm41_KEN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KGZ_shp.zip/gadm41_KGZ_0.shp output=gadm41_KGZ
+v.db.dropcolumn gadm41_KGZ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KHM_shp.zip/gadm41_KHM_0.shp output=gadm41_KHM
+v.db.dropcolumn gadm41_KHM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KIR_shp.zip/gadm41_KIR_0.shp output=gadm41_KIR
+v.db.dropcolumn gadm41_KIR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KNA_shp.zip/gadm41_KNA_0.shp output=gadm41_KNA
+v.db.dropcolumn gadm41_KNA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KOR_shp.zip/gadm41_KOR_0.shp output=gadm41_KOR
+v.db.dropcolumn gadm41_KOR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_KWT_shp.zip/gadm41_KWT_0.shp output=gadm41_KWT
+v.db.dropcolumn gadm41_KWT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LAO_shp.zip/gadm41_LAO_0.shp output=gadm41_LAO
+v.db.dropcolumn gadm41_LAO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LBN_shp.zip/gadm41_LBN_0.shp output=gadm41_LBN
+v.db.dropcolumn gadm41_LBN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LBR_shp.zip/gadm41_LBR_0.shp output=gadm41_LBR
+v.db.dropcolumn gadm41_LBR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LBY_shp.zip/gadm41_LBY_0.shp output=gadm41_LBY
+v.db.dropcolumn gadm41_LBY columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LCA_shp.zip/gadm41_LCA_0.shp output=gadm41_LCA
+v.db.dropcolumn gadm41_LCA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LIE_shp.zip/gadm41_LIE_0.shp output=gadm41_LIE
+v.db.dropcolumn gadm41_LIE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LKA_shp.zip/gadm41_LKA_0.shp output=gadm41_LKA
+v.db.dropcolumn gadm41_LKA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LSO_shp.zip/gadm41_LSO_0.shp output=gadm41_LSO
+v.db.dropcolumn gadm41_LSO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LTU_shp.zip/gadm41_LTU_0.shp output=gadm41_LTU
+v.db.dropcolumn gadm41_LTU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LUX_shp.zip/gadm41_LUX_0.shp output=gadm41_LUX
+v.db.dropcolumn gadm41_LUX columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_LVA_shp.zip/gadm41_LVA_0.shp output=gadm41_LVA
+v.db.dropcolumn gadm41_LVA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MAF_shp.zip/gadm41_MAF_0.shp output=gadm41_MAF
+v.db.dropcolumn gadm41_MAF columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MAR_shp.zip/gadm41_MAR_0.shp output=gadm41_MAR
+v.db.dropcolumn gadm41_MAR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MCO_shp.zip/gadm41_MCO_0.shp output=gadm41_MCO
+v.db.dropcolumn gadm41_MCO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MDA_shp.zip/gadm41_MDA_0.shp output=gadm41_MDA
+v.db.dropcolumn gadm41_MDA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MDG_shp.zip/gadm41_MDG_0.shp output=gadm41_MDG
+v.db.dropcolumn gadm41_MDG columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MDV_shp.zip/gadm41_MDV_0.shp output=gadm41_MDV
+v.db.dropcolumn gadm41_MDV columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MEX_shp.zip/gadm41_MEX_0.shp output=gadm41_MEX
+v.db.dropcolumn gadm41_MEX columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MHL_shp.zip/gadm41_MHL_0.shp output=gadm41_MHL
+v.db.dropcolumn gadm41_MHL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MKD_shp.zip/gadm41_MKD_0.shp output=gadm41_MKD
+v.db.dropcolumn gadm41_MKD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MLI_shp.zip/gadm41_MLI_0.shp output=gadm41_MLI
+v.db.dropcolumn gadm41_MLI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MLT_shp.zip/gadm41_MLT_0.shp output=gadm41_MLT
+v.db.dropcolumn gadm41_MLT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MMR_shp.zip/gadm41_MMR_0.shp output=gadm41_MMR
+v.db.dropcolumn gadm41_MMR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MNE_shp.zip/gadm41_MNE_0.shp output=gadm41_MNE
+v.db.dropcolumn gadm41_MNE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MNG_shp.zip/gadm41_MNG_0.shp output=gadm41_MNG
+v.db.dropcolumn gadm41_MNG columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MNP_shp.zip/gadm41_MNP_0.shp output=gadm41_MNP
+v.db.dropcolumn gadm41_MNP columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MOZ_shp.zip/gadm41_MOZ_0.shp output=gadm41_MOZ
+v.db.dropcolumn gadm41_MOZ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MRT_shp.zip/gadm41_MRT_0.shp output=gadm41_MRT
+v.db.dropcolumn gadm41_MRT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MSR_shp.zip/gadm41_MSR_0.shp output=gadm41_MSR
+v.db.dropcolumn gadm41_MSR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MTQ_shp.zip/gadm41_MTQ_0.shp output=gadm41_MTQ
+v.db.dropcolumn gadm41_MTQ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MUS_shp.zip/gadm41_MUS_0.shp output=gadm41_MUS
+v.db.dropcolumn gadm41_MUS columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MWI_shp.zip/gadm41_MWI_0.shp output=gadm41_MWI
+v.db.dropcolumn gadm41_MWI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MYS_shp.zip/gadm41_MYS_0.shp output=gadm41_MYS
+v.db.dropcolumn gadm41_MYS columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_MYT_shp.zip/gadm41_MYT_0.shp output=gadm41_MYT
+v.db.dropcolumn gadm41_MYT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NAM_shp.zip/gadm41_NAM_0.shp output=gadm41_NAM
+v.db.dropcolumn gadm41_NAM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NCL_shp.zip/gadm41_NCL_0.shp output=gadm41_NCL
+v.db.dropcolumn gadm41_NCL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NER_shp.zip/gadm41_NER_0.shp output=gadm41_NER
+v.db.dropcolumn gadm41_NER columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NFK_shp.zip/gadm41_NFK_0.shp output=gadm41_NFK
+v.db.dropcolumn gadm41_NFK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NGA_shp.zip/gadm41_NGA_0.shp output=gadm41_NGA
+v.db.dropcolumn gadm41_NGA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NIC_shp.zip/gadm41_NIC_0.shp output=gadm41_NIC
+v.db.dropcolumn gadm41_NIC columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NIU_shp.zip/gadm41_NIU_0.shp output=gadm41_NIU
+v.db.dropcolumn gadm41_NIU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NLD_shp.zip/gadm41_NLD_0.shp output=gadm41_NLD
+v.db.dropcolumn gadm41_NLD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NOR_shp.zip/gadm41_NOR_0.shp output=gadm41_NOR
+v.db.dropcolumn gadm41_NOR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NPL_shp.zip/gadm41_NPL_0.shp output=gadm41_NPL
+v.db.dropcolumn gadm41_NPL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NRU_shp.zip/gadm41_NRU_0.shp output=gadm41_NRU
+v.db.dropcolumn gadm41_NRU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_NZL_shp.zip/gadm41_NZL_0.shp output=gadm41_NZL
+v.db.dropcolumn gadm41_NZL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_OMN_shp.zip/gadm41_OMN_0.shp output=gadm41_OMN
+v.db.dropcolumn gadm41_OMN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PAK_shp.zip/gadm41_PAK_0.shp output=gadm41_PAK
+v.db.dropcolumn gadm41_PAK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PAN_shp.zip/gadm41_PAN_0.shp output=gadm41_PAN
+v.db.dropcolumn gadm41_PAN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PCN_shp.zip/gadm41_PCN_0.shp output=gadm41_PCN
+v.db.dropcolumn gadm41_PCN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PER_shp.zip/gadm41_PER_0.shp output=gadm41_PER
+v.db.dropcolumn gadm41_PER columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PHL_shp.zip/gadm41_PHL_0.shp output=gadm41_PHL
+v.db.dropcolumn gadm41_PHL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PLW_shp.zip/gadm41_PLW_0.shp output=gadm41_PLW
+v.db.dropcolumn gadm41_PLW columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PNG_shp.zip/gadm41_PNG_0.shp output=gadm41_PNG
+v.db.dropcolumn gadm41_PNG columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_POL_shp.zip/gadm41_POL_0.shp output=gadm41_POL
+v.db.dropcolumn gadm41_POL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PRI_shp.zip/gadm41_PRI_0.shp output=gadm41_PRI
+v.db.dropcolumn gadm41_PRI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PRK_shp.zip/gadm41_PRK_0.shp output=gadm41_PRK
+v.db.dropcolumn gadm41_PRK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PRT_shp.zip/gadm41_PRT_0.shp output=gadm41_PRT
+v.db.dropcolumn gadm41_PRT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PRY_shp.zip/gadm41_PRY_0.shp output=gadm41_PRY
+v.db.dropcolumn gadm41_PRY columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PSE_shp.zip/gadm41_PSE_0.shp output=gadm41_PSE
+v.db.dropcolumn gadm41_PSE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_PYF_shp.zip/gadm41_PYF_0.shp output=gadm41_PYF
+v.db.dropcolumn gadm41_PYF columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_QAT_shp.zip/gadm41_QAT_0.shp output=gadm41_QAT
+v.db.dropcolumn gadm41_QAT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_REU_shp.zip/gadm41_REU_0.shp output=gadm41_REU
+v.db.dropcolumn gadm41_REU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ROU_shp.zip/gadm41_ROU_0.shp output=gadm41_ROU
+v.db.dropcolumn gadm41_ROU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_RUS_shp.zip/gadm41_RUS_0.shp output=gadm41_RUS
+v.db.dropcolumn gadm41_RUS columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_RWA_shp.zip/gadm41_RWA_0.shp output=gadm41_RWA
+v.db.dropcolumn gadm41_RWA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SAU_shp.zip/gadm41_SAU_0.shp output=gadm41_SAU
+v.db.dropcolumn gadm41_SAU columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SDN_shp.zip/gadm41_SDN_0.shp output=gadm41_SDN
+v.db.dropcolumn gadm41_SDN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SEN_shp.zip/gadm41_SEN_0.shp output=gadm41_SEN
+v.db.dropcolumn gadm41_SEN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SGP_shp.zip/gadm41_SGP_0.shp output=gadm41_SGP
+v.db.dropcolumn gadm41_SGP columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SGS_shp.zip/gadm41_SGS_0.shp output=gadm41_SGS
+v.db.dropcolumn gadm41_SGS columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SHN_shp.zip/gadm41_SHN_0.shp output=gadm41_SHN
+v.db.dropcolumn gadm41_SHN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SJM_shp.zip/gadm41_SJM_0.shp output=gadm41_SJM
+v.db.dropcolumn gadm41_SJM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SLB_shp.zip/gadm41_SLB_0.shp output=gadm41_SLB
+v.db.dropcolumn gadm41_SLB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SLE_shp.zip/gadm41_SLE_0.shp output=gadm41_SLE
+v.db.dropcolumn gadm41_SLE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SLV_shp.zip/gadm41_SLV_0.shp output=gadm41_SLV
+v.db.dropcolumn gadm41_SLV columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SMR_shp.zip/gadm41_SMR_0.shp output=gadm41_SMR
+v.db.dropcolumn gadm41_SMR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SOM_shp.zip/gadm41_SOM_0.shp output=gadm41_SOM
+v.db.dropcolumn gadm41_SOM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SPM_shp.zip/gadm41_SPM_0.shp output=gadm41_SPM
+v.db.dropcolumn gadm41_SPM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SRB_shp.zip/gadm41_SRB_0.shp output=gadm41_SRB
+v.db.dropcolumn gadm41_SRB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SSD_shp.zip/gadm41_SSD_0.shp output=gadm41_SSD
+v.db.dropcolumn gadm41_SSD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_STP_shp.zip/gadm41_STP_0.shp output=gadm41_STP
+v.db.dropcolumn gadm41_STP columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SUR_shp.zip/gadm41_SUR_0.shp output=gadm41_SUR
+v.db.dropcolumn gadm41_SUR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SVK_shp.zip/gadm41_SVK_0.shp output=gadm41_SVK
+v.db.dropcolumn gadm41_SVK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SVN_shp.zip/gadm41_SVN_0.shp output=gadm41_SVN
+v.db.dropcolumn gadm41_SVN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SWE_shp.zip/gadm41_SWE_0.shp output=gadm41_SWE
+v.db.dropcolumn gadm41_SWE columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SWZ_shp.zip/gadm41_SWZ_0.shp output=gadm41_SWZ
+v.db.dropcolumn gadm41_SWZ columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SXM_shp.zip/gadm41_SXM_0.shp output=gadm41_SXM
+v.db.dropcolumn gadm41_SXM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SYC_shp.zip/gadm41_SYC_0.shp output=gadm41_SYC
+v.db.dropcolumn gadm41_SYC columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_SYR_shp.zip/gadm41_SYR_0.shp output=gadm41_SYR
+v.db.dropcolumn gadm41_SYR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TCA_shp.zip/gadm41_TCA_0.shp output=gadm41_TCA
+v.db.dropcolumn gadm41_TCA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TCD_shp.zip/gadm41_TCD_0.shp output=gadm41_TCD
+v.db.dropcolumn gadm41_TCD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TGO_shp.zip/gadm41_TGO_0.shp output=gadm41_TGO
+v.db.dropcolumn gadm41_TGO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_THA_shp.zip/gadm41_THA_0.shp output=gadm41_THA
+v.db.dropcolumn gadm41_THA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TJK_shp.zip/gadm41_TJK_0.shp output=gadm41_TJK
+v.db.dropcolumn gadm41_TJK columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TKL_shp.zip/gadm41_TKL_0.shp output=gadm41_TKL
+v.db.dropcolumn gadm41_TKL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TKM_shp.zip/gadm41_TKM_0.shp output=gadm41_TKM
+v.db.dropcolumn gadm41_TKM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TLS_shp.zip/gadm41_TLS_0.shp output=gadm41_TLS
+v.db.dropcolumn gadm41_TLS columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TON_shp.zip/gadm41_TON_0.shp output=gadm41_TON
+v.db.dropcolumn gadm41_TON columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TTO_shp.zip/gadm41_TTO_0.shp output=gadm41_TTO
+v.db.dropcolumn gadm41_TTO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TUN_shp.zip/gadm41_TUN_0.shp output=gadm41_TUN
+v.db.dropcolumn gadm41_TUN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TUR_shp.zip/gadm41_TUR_0.shp output=gadm41_TUR
+v.db.dropcolumn gadm41_TUR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TUV_shp.zip/gadm41_TUV_0.shp output=gadm41_TUV
+v.db.dropcolumn gadm41_TUV columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TWN_shp.zip/gadm41_TWN_0.shp output=gadm41_TWN
+v.db.dropcolumn gadm41_TWN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_TZA_shp.zip/gadm41_TZA_0.shp output=gadm41_TZA
+v.db.dropcolumn gadm41_TZA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_UGA_shp.zip/gadm41_UGA_0.shp output=gadm41_UGA
+v.db.dropcolumn gadm41_UGA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_UKR_shp.zip/gadm41_UKR_0.shp output=gadm41_UKR
+v.db.dropcolumn gadm41_UKR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_UMI_shp.zip/gadm41_UMI_0.shp output=gadm41_UMI
+v.db.dropcolumn gadm41_UMI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_URY_shp.zip/gadm41_URY_0.shp output=gadm41_URY
+v.db.dropcolumn gadm41_URY columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_USA_shp.zip/gadm41_USA_0.shp output=gadm41_USA
+v.db.dropcolumn gadm41_USA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_UZB_shp.zip/gadm41_UZB_0.shp output=gadm41_UZB
+v.db.dropcolumn gadm41_UZB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_VAT_shp.zip/gadm41_VAT_0.shp output=gadm41_VAT
+v.db.dropcolumn gadm41_VAT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_VCT_shp.zip/gadm41_VCT_0.shp output=gadm41_VCT
+v.db.dropcolumn gadm41_VCT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_VEN_shp.zip/gadm41_VEN_0.shp output=gadm41_VEN
+v.db.dropcolumn gadm41_VEN columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_VGB_shp.zip/gadm41_VGB_0.shp output=gadm41_VGB
+v.db.dropcolumn gadm41_VGB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_VIR_shp.zip/gadm41_VIR_0.shp output=gadm41_VIR
+v.db.dropcolumn gadm41_VIR columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_VNM_shp.zip/gadm41_VNM_0.shp output=gadm41_VNM
+v.db.dropcolumn gadm41_VNM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_VUT_shp.zip/gadm41_VUT_0.shp output=gadm41_VUT
+v.db.dropcolumn gadm41_VUT columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_WLF_shp.zip/gadm41_WLF_0.shp output=gadm41_WLF
+v.db.dropcolumn gadm41_WLF columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_WSM_shp.zip/gadm41_WSM_0.shp output=gadm41_WSM
+v.db.dropcolumn gadm41_WSM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_XAD_shp.zip/gadm41_XAD_0.shp output=gadm41_XAD
+v.db.dropcolumn gadm41_XAD columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_XCA_shp.zip/gadm41_XCA_0.shp output=gadm41_XCA
+v.db.dropcolumn gadm41_XCA columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_XCL_shp.zip/gadm41_XCL_0.shp output=gadm41_XCL
+v.db.dropcolumn gadm41_XCL columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_XKO_shp.zip/gadm41_XKO_0.shp output=gadm41_XKO
+v.db.dropcolumn gadm41_XKO columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_XPI_shp.zip/gadm41_XPI_0.shp output=gadm41_XPI
+v.db.dropcolumn gadm41_XPI columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_XSP_shp.zip/gadm41_XSP_0.shp output=gadm41_XSP
+v.db.dropcolumn gadm41_XSP columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_YEM_shp.zip/gadm41_YEM_0.shp output=gadm41_YEM
+v.db.dropcolumn gadm41_YEM columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ZAF_shp.zip/gadm41_ZAF_0.shp output=gadm41_ZAF
+v.db.dropcolumn gadm41_ZAF columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ZMB_shp.zip/gadm41_ZMB_0.shp output=gadm41_ZMB
+v.db.dropcolumn gadm41_ZMB columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ZNC_shp.zip/gadm41_ZNC_0.shp output=gadm41_ZNC
+v.db.dropcolumn gadm41_ZNC columns=COUNTRY
+v.in.ogr --overwrite -o input=/vsizip/GADM/gadm41_ZWE_shp.zip/gadm41_ZWE_0.shp output=gadm41_ZWE
+v.db.dropcolumn gadm41_ZWE columns=COUNTRY
