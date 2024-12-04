@@ -55,11 +55,3 @@ The result, `-109.27001953125 -27.09228515625 1930072.156897064` is unsurprising
 Could I have done this more efficiently, more accurately, or better in some other way?
 
 I've also tried doing something similar using the Julia programming language, but haven't found a notably better non-GRASS solution.
-
-
-
-
-
-*** bits and pieces, not formal, axis of inacc
-
-TODO: push git, insert URLs, SPELL
